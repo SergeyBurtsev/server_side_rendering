@@ -1,0 +1,5 @@
+<%= tag.div class: "product-actions", id: dom_id(product, :actions) do %>
+  <div><%= button_to "-", [:cart, product], params: { quantity: Current.cart[product.id] - 1 }, disabled: !Current.cart[product.id].positive? %></div>
+  <div><%= Current.cart[product.id] %></div>
+  <div><%= button_to "+", [:cart, product], params: { quantity: Current.cart[product.id] + 1 } %></div>
+<% end %>

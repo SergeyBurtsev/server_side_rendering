@@ -1,0 +1,17 @@
+<div class="sidebar-cart" id="sidebar_cart">
+  <h3>Cart</h3>
+
+  <table>
+    <thead>
+    </thead>
+
+    <tbody>
+      <% Current.cart.items.each do |item| %>
+        <tr>
+          <th><%= item.product.name %></th>
+          <td><%= item.quantity %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

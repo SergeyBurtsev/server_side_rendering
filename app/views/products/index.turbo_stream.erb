@@ -1,0 +1,7 @@
+<%= turbo_stream.append "products_list" do %>
+  <%= render @products %>
+<% end %>
+
+<%= turbo_stream.replace "show_more" do %>
+  <%= render "show_more", current_page: @current_page %>
+<% end %>

@@ -1,0 +1,11 @@
+<%= turbo_stream.replace "header_cart" do %>
+  <%= render "cart/header" %>
+<% end %>
+
+<%= turbo_stream.replace "sidebar_cart" do %>
+  <%= render "cart/sidebar" %>
+<% end %>
+
+<%= turbo_stream.replace dom_id(@product, :actions) do %>
+  <%= render "products/actions", product: @product %>
+<% end %>
